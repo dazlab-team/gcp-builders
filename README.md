@@ -13,27 +13,20 @@ custom Docker images used in [Google Cloud Build](https://cloud.google.com/cloud
 
 To use these build images in your Google Cloud Project, do the following
 
-1. Clone this source repo:
+1. Clone this source repo.
+2. Go to the selected image, and schedule a build from the command line.
+
+Example commands for [heroku](./heroku/README.md) image:
 
 ```bash
 git clone https://github.com/dazlab-team/gcp-builders.git
-```
-
-2. Go to the selected image, for example, `heroku`, and schedule a build from the command line:
-
-```bash
-cd gcp-builders/heroku && gcloud --project=<your GCP project ID> builds submit .
-```
-
-3. Check the new image built using this command:
-
-```bash
-gcloud container images list --filter heroku
+cd gcp-builders/heroku
+gcloud --project=<your GCP project ID> builds submit .
 ```
 
 ## Using the image
 
-Based on the the example above, here's how to use the custom `heroku` image:
+Based on the the example above, here's how to use the installed `heroku` image:
 
 ```bash
 steps:
