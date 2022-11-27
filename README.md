@@ -35,6 +35,8 @@ steps:
   env: ["HEROKU_API_KEY=XXXXXXXXXXXXX"]
 ```
 
+See also more examples in the image's README.
+
 ## License
 
 This source code is licensed under Apache 2.0. Full license text is available in [LICENSE](LICENSE).
