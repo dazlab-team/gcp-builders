@@ -1,0 +1,8 @@
+steps:
+  - name: gcr.io/cloud-builders/docker
+    args: [ 'build', '--tag=gcr.io/$PROJECT_ID/heroku', '.' ]
+  - name: gcr.io/$PROJECT_ID/heroku
+    args: [ '--version' ]
+
+images: [ 'gcr.io/$PROJECT_ID/heroku' ]
+tags: [ 'dazlab-team' ]
